@@ -63,11 +63,10 @@ html {
 /* Optional: Add fade-in effect when scrolling to sections */
 section {
     scroll-margin-top: 100px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: none;    /* translateY(20px) */
+    transition: none;    /* opacity 0.5s ease, transform 0.5s ease */
 }
-
 section:target {
     opacity: 1;
     transform: translateY(0);
@@ -644,3 +643,4 @@ body.dark-mode .logo-placeholder {
     background-color: #4c956c;
 
 }
+
