@@ -56,7 +56,8 @@ textarea:focus {
 }
 
 html {
-    scroll-behavior: smooth;
+   scroll-behavior: smooth;
+   scroll-padding-top: 58px; /* Change 80px to your header's exact height if different */
 }
 
 /* Optional: Add fade-in effect when scrolling to sections */
@@ -641,4 +642,5 @@ body.dark-mode .form-group textarea {
 
 body.dark-mode .logo-placeholder {
     background-color: #4c956c;
+
 }
