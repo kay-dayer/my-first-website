@@ -285,7 +285,7 @@ section {
    ========================= */
 .about-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
 }
@@ -643,4 +643,5 @@ body.dark-mode .logo-placeholder {
     background-color: #4c956c;
 
 }
+
 
