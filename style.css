@@ -293,6 +293,7 @@ section {
 .about-text {
     flex: 1;
     min-width: 300px;
+    text-align: justify;
 }
 
 .about-image {
@@ -643,5 +644,6 @@ body.dark-mode .logo-placeholder {
     background-color: #4c956c;
 
 }
+
 
 
