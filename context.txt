@@ -1,0 +1,3 @@
+This is a single page static site.
+It is a presentation for a cathering small company specialized in clinics food both for patients and employees and for schools cafeterias.
+The use of Javascript is kept to a minimum.
