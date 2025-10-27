@@ -1,0 +1,23 @@
+1. for future changes
+# Check what files have changed
+git status
+
+# Add all changes
+git add .
+
+# Commit changes with a descriptive message
+git commit -m "Describe your changes here"
+
+# Push to GitHub
+git push
+
+2. Useful commands for daily use
+
+# See what files are changed/untracked
+git status
+
+# See what specific changes were made
+git diff
+
+# Check your commit history
+git log --oneline
