@@ -47,8 +47,8 @@ New_site-santeplat/
 ## Features
 
 - Responsive design
-- Dark/Light mode toggle
-- Multi-language support (French/English) - *Note: UI only, not yet functional.*
+- Multi-language support (French/English) - Fully functional, implemented with a custom JavaScript translation engine.
+- Dark/Light mode toggle - Fully functional.
 - Accessible navigation
 - Contact form
 - Modals for more details on services and legal information.
