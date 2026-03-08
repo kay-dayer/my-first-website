@@ -416,6 +416,13 @@ section {
     transform: translateY(-10px);
 }
 
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
 .service-image {
     height: 300px;
     overflow: hidden;
