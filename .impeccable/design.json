@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T11:22:39.9475241Z",
+  "title": "Design System: Nutricare Catering",
+  "extensions": {
+    "colorMeta": {
+      "action-deep-green": { "role": "primary", "displayName": "Deep Action Green", "canonical": "#143b2f", "tonalRamp": ["oklch(18% 0.035 160)", "oklch(25% 0.05 160)", "#143b2f", "oklch(42% 0.075 160)", "oklch(55% 0.065 160)", "oklch(68% 0.05 160)", "oklch(82% 0.025 160)", "oklch(95% 0.008 160)"] },
+      "supporting-green": { "role": "primary", "displayName": "Supporting Green", "canonical": "#2f7258", "tonalRamp": ["oklch(18% 0.03 160)", "oklch(27% 0.05 160)", "oklch(37% 0.07 160)", "#2f7258", "oklch(58% 0.08 160)", "oklch(70% 0.06 160)", "oklch(83% 0.03 160)", "oklch(95% 0.008 160)"] },
+      "focus-gold": { "role": "secondary", "displayName": "Focus Gold", "canonical": "#e9b949", "tonalRamp": ["oklch(18% 0.04 85)", "oklch(29% 0.07 85)", "oklch(41% 0.1 85)", "oklch(54% 0.13 85)", "oklch(67% 0.14 85)", "#e9b949", "oklch(86% 0.08 85)", "oklch(95% 0.025 85)"] },
+      "charcoal": { "role": "neutral", "displayName": "Charcoal", "canonical": "#1c2622", "tonalRamp": ["oklch(15% 0.012 160)", "#1c2622", "oklch(31% 0.018 160)", "oklch(43% 0.018 160)", "oklch(56% 0.015 160)", "oklch(69% 0.012 160)", "oklch(83% 0.008 160)", "oklch(95% 0.003 160)"] },
+      "muted-charcoal": { "role": "neutral", "displayName": "Muted Charcoal", "canonical": "#43534c", "tonalRamp": ["oklch(16% 0.012 160)", "oklch(25% 0.018 160)", "#43534c", "oklch(45% 0.022 160)", "oklch(57% 0.018 160)", "oklch(70% 0.014 160)", "oklch(83% 0.008 160)", "oklch(95% 0.003 160)"] },
+      "mineral-green": { "role": "neutral", "displayName": "Mineral Green", "canonical": "#edf3ef", "tonalRamp": ["oklch(16% 0.018 160)", "oklch(28% 0.025 160)", "oklch(41% 0.028 160)", "oklch(55% 0.026 160)", "oklch(68% 0.02 160)", "oklch(80% 0.014 160)", "#edf3ef", "oklch(97% 0.005 160)"] },
+      "deep-green": { "role": "neutral", "displayName": "Deep Green", "canonical": "#0d241c", "tonalRamp": ["#0d241c", "oklch(24% 0.038 160)", "oklch(34% 0.05 160)", "oklch(46% 0.055 160)", "oklch(59% 0.045 160)", "oklch(71% 0.032 160)", "oklch(84% 0.018 160)", "oklch(95% 0.005 160)"] },
+      "canvas": { "role": "neutral", "displayName": "Warm White Canvas", "canonical": "#fbfcfa", "tonalRamp": ["oklch(15% 0.004 130)", "oklch(28% 0.005 130)", "oklch(42% 0.005 130)", "oklch(56% 0.005 130)", "oklch(69% 0.005 130)", "oklch(82% 0.004 130)", "oklch(93% 0.003 130)", "#fbfcfa"] },
+      "surface": { "role": "neutral", "displayName": "White Surface", "canonical": "#ffffff", "tonalRamp": ["#262626", "#404040", "#595959", "#737373", "#999999", "#bfbfbf", "#e6e6e6", "#ffffff"] },
+      "border": { "role": "neutral", "displayName": "Mineral Border", "canonical": "#cbd8d0", "tonalRamp": ["oklch(17% 0.012 160)", "oklch(29% 0.018 160)", "oklch(42% 0.022 160)", "oklch(55% 0.02 160)", "oklch(68% 0.017 160)", "#cbd8d0", "oklch(87% 0.012 160)", "oklch(96% 0.004 160)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero promise only." },
+      "headline": { "displayName": "Headline", "purpose": "Major section statements." },
+      "title": { "displayName": "Title", "purpose": "Service and audience titles." },
+      "body": { "displayName": "Body", "purpose": "Neutral factual copy." },
+      "label": { "displayName": "Label", "purpose": "Navigation, controls and form labels." }
+    },
+    "shadows": [
+      { "name": "decisive-lift", "value": "0 18px 48px rgba(0, 0, 0, 0.18)", "purpose": "Hero panels, contact form, modals and key imagery." },
+      { "name": "quiet-card-lift", "value": "0 14px 40px rgba(15, 48, 37, 0.1)", "purpose": "Service cards." },
+      { "name": "header-separation", "value": "0 8px 30px rgba(15, 48, 37, 0.08)", "purpose": "Fixed navigation." }
+    ],
+    "motion": [
+      { "name": "state", "value": "180ms ease-out", "purpose": "Button, navigation and menu state changes." },
+      { "name": "audience-change", "value": "260ms ease-out", "purpose": "Audience content fade-and-rise; disabled for reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "compact-desktop", "value": "1050px" },
+      { "name": "stacked", "value": "860px" },
+      { "name": "mobile", "value": "620px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary quote and submit action.",
+      "html": "<button class=\"ds-btn-primary\">Demander un devis</button>",
+      "css": ".ds-btn-primary{min-height:50px;padding:14px 24px;border:1px solid transparent;border-radius:12px;background:var(--primary-color,#143b2f);color:#fff;font:700 .94rem/1.2 Archivo,sans-serif;cursor:pointer;transition:transform 180ms ease-out,background-color 180ms ease-out}.ds-btn-primary:hover{background:#245b47;transform:translateY(-2px)}.ds-btn-primary:focus-visible{outline:3px solid var(--accent-color,#e9b949);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Lower-priority action beside the primary CTA.",
+      "html": "<button class=\"ds-btn-secondary\">Découvrir nos services</button>",
+      "css": ".ds-btn-secondary{min-height:50px;padding:14px 24px;border:1px solid #143b2f;border-radius:12px;background:transparent;color:#143b2f;font:700 .94rem/1.2 Archivo,sans-serif;cursor:pointer;transition:background-color 180ms ease-out,color 180ms ease-out}.ds-btn-secondary:hover{background:#143b2f;color:#fff}.ds-btn-secondary:focus-visible{outline:3px solid #e9b949;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Contact-form field on a quiet white surface.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-name\">Nom complet</label><input class=\"ds-field\" id=\"ds-name\" placeholder=\"Votre nom\">",
+      "css": ".ds-field-label{display:block;margin-bottom:7px;color:var(--text-color,#1c2622);font:700 .94rem/1.2 Archivo,sans-serif}.ds-field{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--border-color,#cbd8d0);border-radius:10px;background:var(--card-bg,#fff);color:var(--text-color,#1c2622);font:400 1rem/1.6 Archivo,sans-serif}.ds-field:focus{border-color:var(--secondary-color,#2f7258)}.ds-field:focus-visible{outline:3px solid var(--accent-color,#e9b949);outline-offset:3px}"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "description": "Bold institutional section link.",
+      "html": "<a class=\"ds-nav-link\" href=\"#services\">Nos services</a>",
+      "css": ".ds-nav-link{display:inline-block;padding:12px 0 8px;border-bottom:3px solid transparent;color:var(--text-color,#1c2622);font:700 .94rem/1.2 Archivo,sans-serif;text-decoration:none;transition:color 180ms ease-out,border-color 180ms ease-out}.ds-nav-link:hover{color:var(--primary-color,#143b2f);border-bottom-color:var(--primary-color,#143b2f)}.ds-nav-link:focus-visible{outline:3px solid var(--accent-color,#e9b949);outline-offset:3px}"
+    },
+    {
+      "name": "Audience Tabs",
+      "kind": "custom",
+      "description": "Equal clinic and school context selector.",
+      "html": "<div class=\"ds-audience-tabs\"><button class=\"ds-audience-tab ds-active\">Cliniques</button><button class=\"ds-audience-tab\">Écoles</button></div>",
+      "css": ".ds-audience-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:6px;border-radius:14px;background:#245b47}.ds-audience-tab{min-height:46px;border:0;border-radius:10px;background:transparent;color:#dfece6;font:700 .94rem/1.2 Archivo,sans-serif;cursor:pointer}.ds-audience-tab.ds-active{background:#fff;color:#143b2f}.ds-audience-tab:hover{background:rgba(255,255,255,.12)}.ds-audience-tab:focus-visible{outline:3px solid #e9b949;outline-offset:1px}"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "description": "Image-led service summary with quiet lift.",
+      "html": "<article class=\"ds-service-card\"><div class=\"ds-service-image\"></div><div class=\"ds-service-content\"><h3>Restauration pour cliniques</h3><p>Des repas adaptés aux besoins de chaque établissement.</p></div></article>",
+      "css": ".ds-service-card{overflow:hidden;padding:8px;border-radius:14px;background:var(--card-bg,#fff);box-shadow:0 14px 40px rgba(15,48,37,.1);font-family:Archivo,sans-serif;transition:transform 180ms ease-out}.ds-service-card:hover{transform:translateY(-4px)}.ds-service-card:focus-within{outline:3px solid var(--accent-color,#e9b949);outline-offset:3px}.ds-service-image{height:180px;border-radius:10px;background:linear-gradient(135deg,#2f7258,#edf3ef)}.ds-service-content{padding:24px}.ds-service-content h3{margin:0 0 14px;color:var(--text-color,#1c2622);font-size:1.5rem;line-height:1.1;letter-spacing:-.025em}.ds-service-content p{margin:0;color:var(--muted-color,#43534c);line-height:1.6}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Institutional Directness",
+    "overview": "Nutricare is a calm, decisive institutional world: white and mineral-green surfaces, deep-green actions, charcoal type and professional food photography at meaningful scale. Restrained rounding and generous spacing keep rigor approachable without turning proof into spectacle.\n\nThe system gives clinics and schools equal visual weight. It shares the finish level of established collective-catering brands such as Compass Group France and Restalliance without borrowing their identities.",
+    "keyCharacteristics": [
+      "Direct hierarchy and factual, neutral proof language.",
+      "Archivo throughout, with compact oversized headings.",
+      "Decisive food photography balanced by quiet surfaces.",
+      "Deep-green actions, mineral-green sections and restrained gold focus cues.",
+      "Equivalent prominence for clinical and educational audiences."
+    ],
+    "rules": [
+      { "name": "The Green Carries Meaning Rule", "body": "Deep green marks action, authority or audience context; it is not ambient decoration.", "section": "colors" },
+      { "name": "The One-Family Rule", "body": "Use Archivo for every interface and editorial role; hierarchy comes from scale, weight and spacing.", "section": "typography" },
+      { "name": "The Equal Audiences Rule", "body": "Clinic and school entry points receive identical area, hierarchy and interaction weight.", "section": "layout" },
+      { "name": "The Selective Lift Rule", "body": "Elevate only decision surfaces and primary imagery; factual rows remain flat.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use professional food photography at decisive scale with functional crops.",
+      "Do keep claims factual and neutral; let composition and imagery carry confidence.",
+      "Do preserve the light/dark token mapping and visible keyboard focus.",
+      "Do give clinics and schools equal prominence."
+    ],
+    "donts": [
+      "Don't accumulate generic cards when a flat list or separator communicates the content.",
+      "Don't invent badges, metrics, certifications or testimonials.",
+      "Don't use gold as a broad decorative accent.",
+      "Don't copy competitor branding, layouts or visual signatures."
+    ]
+  }
+}

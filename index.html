@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutricare catering</title>
+    <meta name="description"
+        content="Nutricare Catering accompagne les cliniques et les établissements scolaires avec des solutions de restauration collective adaptées.">
+    <meta name="theme-color" content="#143b2f">
+    <title>Nutricare Catering — Restauration collective</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/SP-ICON.png" class="icon/png">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+</head>
 
 <body>
     <!-- Header & Navigation -->
@@ -17,12 +21,16 @@
         <div class="container header-container">
             <div class="logo-container">
                 <div class="logo-sante-plat">
-                    <img src="images/logo_blanc1.png" alt="logo_sante_plat" class="logo-on-light">
-                    <img src="images/Logo_Santeplat_noir1.png" alt="logo_sante_plat" class="logo-on-dark">
+                    <img src="images/logo_blanc1.png" alt="Nutricare Catering" class="logo-on-light">
+                    <img src="images/Logo_Santeplat_noir1.png" alt="Nutricare Catering" class="logo-on-dark">
                 </div>
             </div>
             <div class=" nav-right">
-                <nav class="main-nav">
+                <button class="mobile-menu-btn" type="button" aria-controls="main-navigation" aria-expanded="false"
+                    aria-label="Ouvrir le menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <nav class="main-nav" id="main-navigation" aria-label="Navigation principale">
                     <ul>
                         <li><a href="#home" data-i18n="nav-home">Accueil</a></li>
                         <li><a href="#about" data-i18n="nav-about">À propos</a></li>
@@ -33,20 +41,19 @@
 
                 </nav>
                 <div class="utilities">
-                    <nav>
+                    <div class="utility-controls">
                         <div class="language-switcher">
-                            <button class="active">FR</button>
-                            <button>EN</button>
+                            <button class="active" type="button" aria-label="Afficher le site en français">FR</button>
+                            <button type="button" aria-label="Display the site in English">EN</button>
                         </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 16px;">
-                            <!-- Rounded switch -->
-                            <label class="switch">
+                        <div class="theme-control">
+                            <label class="switch" aria-label="Activer le mode sombre">
                                 <input type="checkbox" id="darkModeToggle">
                                 <span class="slider round"></span>
                             </label>
-                            <span style="margin-top: 8px; font-size: 0.75em;">🌞/🌙</span>
+                            <i class="fas fa-moon" aria-hidden="true"></i>
                         </div>
-                    </nav>
+                    </div>
                 </div>
             </div>
 
@@ -54,13 +61,38 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 data-i18n="hero-title">Spécialiste de la restauration collective pour établissements médicaux et
-                scolaires</h1>
-            <p data-i18n="hero-subtitle">Des solutions culinaires nutritives, hygiéniques et adaptées à vos besoins
-                spécifiques</p>
-            <a href="#contact" class="btn" data-i18n="hero-btn">Contactez-nous</a>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <h1 id="hero-title" data-i18n="hero-title">Des repas adaptés, du soin à l’école</h1>
+                <p data-i18n="hero-subtitle">Restauration collective pour établissements médicaux et scolaires, de la
+                    conception des menus à la livraison.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn" data-i18n="hero-btn">Demander un devis</a>
+                    <a href="#services" class="btn-secondary" data-i18n="hero-secondary">Découvrir nos services</a>
+                </div>
+            </div>
+
+            <div class="hero-audience" aria-label="Choisir votre établissement">
+                <div class="audience-tabs" role="group" aria-label="Type d’établissement">
+                    <button type="button" class="audience-tab active" data-audience="clinic" aria-pressed="true"
+                        data-i18n="audience-clinic">Cliniques</button>
+                    <button type="button" class="audience-tab" data-audience="school" aria-pressed="false"
+                        data-i18n="audience-school">Écoles</button>
+                </div>
+                <div class="audience-content" aria-live="polite">
+                    <div data-audience-panel="clinic">
+                        <h2 data-i18n="audience-clinic-title">Des repas adaptés aux besoins de soins</h2>
+                        <p data-i18n="audience-clinic-text">Menus spécifiques, régimes particuliers et organisation
+                            pensée pour les patients comme pour les équipes.</p>
+                    </div>
+                    <div data-audience-panel="school" hidden>
+                        <h2 data-i18n="audience-school-title">Une cantine équilibrée au quotidien</h2>
+                        <p data-i18n="audience-school-text">Des menus variés, une logistique fiable et un service adapté
+                            au rythme de votre établissement.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -111,8 +143,8 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-                        alt="Notre équipe">
+                    <img src="images/medina-catering-optimized.jpg"
+                        alt="Préparation de portions individuelles pour un service collectif" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -130,7 +162,7 @@
                 <div class="service-card">
                     <a href="#clinic-modal" class="service-card-link">
                         <div class="service-image">
-                            <img src="images/restau_clinique.jpg" alt="Restauration pour cliniques">
+                            <img src="images/restau-clinique-optimized.jpg" alt="Restauration pour cliniques" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 data-i18n="service-clinic-title">Restauration pour cliniques</h3>
@@ -145,7 +177,7 @@
                 <div class="service-card">
                     <a href="#cantine-modal" class="service-card-link">
                         <div class="service-image">
-                            <img src="images/Gemini_Generated_Student_lunch.png" alt="Cantines scolaires">
+                            <img src="images/Gemini_Generated_Student_lunch.png" alt="Cantines scolaires" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 data-i18n="service-school-title">Cantines scolaires</h3>
@@ -159,7 +191,7 @@
                 <div class="service-card">
                     <a href="#livraison-modal" class="service-card-link">
                         <div class="service-image">
-                            <img src="images/logistic.jpg" alt="Logistique et flexibilité">
+                            <img src="images/logistic-optimized.jpg" alt="Logistique et flexibilité" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 data-i18n="service-logistics-title">Logistique et flexibilité</h3>
@@ -211,7 +243,7 @@
                 </div>
 
                 <div class="quality-image">
-                    <img src="images/Gemini_Generated_hygiene.png" alt="Contrôle qualité">
+                    <img src="images/Gemini_Generated_hygiene.png" alt="Contrôle qualité" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -240,7 +272,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4 data-i18n="contact-phone-label">Téléphone</h4>
-                            <p style="color: --primary-color;">+212 5 22 33 44 55</p>
+                            <p>+212 5 37 33 44 55</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -307,12 +339,6 @@
                     <p data-i18n="footer-desc">Spécialiste de la restauration collective pour établissements médicaux et
                         scolaires.
                     </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
 
                 <div class="footer-col">
@@ -352,7 +378,7 @@
             </div>
 
             <div class="copyright">
-                <p data-i18n="footer-copyright">&copy; 2025 Nutricare catering. Tous droits réservés.</p>
+                <p data-i18n="footer-copyright">&copy; 2026 Nutricare Catering. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -364,9 +390,27 @@
 
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', () => {
-                document.querySelector('.main-nav').classList.toggle('active');
+                const mainNav = document.querySelector('.main-nav');
+                const isOpen = mainNav.classList.toggle('active');
+                mobileMenuBtn.setAttribute('aria-expanded', isOpen);
             });
         }
+
+        document.querySelectorAll('.audience-tab').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedAudience = button.dataset.audience;
+
+                document.querySelectorAll('.audience-tab').forEach(tab => {
+                    const isActive = tab === button;
+                    tab.classList.toggle('active', isActive);
+                    tab.setAttribute('aria-pressed', isActive);
+                });
+
+                document.querySelectorAll('[data-audience-panel]').forEach(panel => {
+                    panel.hidden = panel.dataset.audiencePanel !== selectedAudience;
+                });
+            });
+        });
 
         // Translations
         const translations = {
@@ -376,9 +420,16 @@
                 'nav-services': 'Services',
                 'nav-quality': 'Engagement qualité',
                 'nav-contact': 'Contact',
-                'hero-title': 'Spécialiste de la restauration collective pour établissements médicaux et scolaires',
-                'hero-subtitle': 'Des solutions culinaires nutritives, hygiéniques et adaptées à vos besoins spécifiques',
-                'hero-btn': 'Contactez-nous',
+                'hero-title': 'Des repas adaptés, du soin à l’école',
+                'hero-subtitle': 'Restauration collective pour établissements médicaux et scolaires, de la conception des menus à la livraison.',
+                'hero-btn': 'Demander un devis',
+                'hero-secondary': 'Découvrir nos services',
+                'audience-clinic': 'Cliniques',
+                'audience-school': 'Écoles',
+                'audience-clinic-title': 'Des repas adaptés aux besoins de soins',
+                'audience-clinic-text': 'Menus spécifiques, régimes particuliers et organisation pensée pour les patients comme pour les équipes.',
+                'audience-school-title': 'Une cantine équilibrée au quotidien',
+                'audience-school-text': 'Des menus variés, une logistique fiable et un service adapté au rythme de votre établissement.',
                 'about-title': 'À propos de nous',
                 'about-subtitle': 'Découvrez notre histoire et nos valeurs qui font de nous un partenaire de confiance',
                 'value-hygiene-title': 'Hygiène',
@@ -426,19 +477,19 @@
                 'footer-cookies': 'Politique des cookies',
                 'footer-terms': 'Conditions générales',
                 'footer-legal-info': 'Mentions légales',
-                'footer-copyright': '© 2025 Nutricare catering. Tous droits réservés.',
+                'footer-copyright': '© 2026 Nutricare Catering. Tous droits réservés.',
                 'clinic-modal-title': 'Restauration pour cliniques',
                 'clinic-modal-text': 'Offrez à vos patients et personnel soignant une expérience culinaire adaptée à leurs besoins spécifiques. Nos menus thérapeutiques respectent les régimes particuliers et allergies, tout en garantissant plaisir et équilibre nutritionnel. Une solution clé en main qui soulage votre établissement des contraintes logistiques.',
                 'cantine-modal-title': 'Cantines scolaires',
                 'cantine-modal-text': 'Transformez le temps du repas en moment d\'éducation et de découverte ! Nos menus équilibrés éveillent les papilles des jeunes convives tout en répondant aux exigences nutritionnelles. Des produits frais, une approche pédagogique et une gestion simplifiée pour une cantine qui devient un véritable atout éducatif.',
                 'nutrition-modal-title': 'Conseil en nutrition',
-                'nutrition-modal-text': 'Nos menus sont conçus pour répondre aux besoins nutritionnels spécifiques de chaque public. Pour des conseils personnalisés et des astuces quotidiennes, retrouvez-nous sur nos réseaux sociaux où nous partageons régulièrement du contenu éducatif.',
+                'nutrition-modal-text': 'Nos menus sont conçus pour répondre aux besoins nutritionnels spécifiques de chaque public. Contactez-nous pour étudier les contraintes et attentes de votre établissement.',
                 'livraison-modal-title': 'Livraison et logistique',
                 'livraison-modal-text': 'Notre service logistique assure des livraisons ponctuels adaptés à vos contraintes horaires. Nous maîtrisons parfaitement la chaîne du froid et du chaud pour garantir la qualité et la sécurité de vos repas. Chaque établissement bénéficie d\'un planning de livraison personnalisé et d\'une traçabilité complète.',
                 'privacy-modal-title': 'Politique de confidentialité',
                 'privacy-modal-text': 'Nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact sont uniquement utilisées pour répondre à vos demandes et ne sont en aucun cas partagées avec des tiers.',
                 'cookies-modal-title': 'Politique des cookies',
-                'cookies-modal-text': 'Notre site fonctionne sans cookies propres. Cependant, les liens vers nos réseaux sociaux (Facebook, Twitter, Instagram, LinkedIn) peuvent impliquer des cookies tiers lors de votre navigation sur ces plateformes. Nous vous invitons à consulter leurs politiques de confidentialité respectives pour plus d\'informations.',
+                'cookies-modal-text': 'Notre site fonctionne sans cookies propres. Le formulaire de contact est traité par Formspree, dont les services peuvent appliquer leur propre politique de confidentialité.',
                 'terms-modal-title': 'Conditions générales',
                 'terms-modal-text': 'Nutricare catering fournit des services de restauration collective sur devis personnalisé. Les tarifs sont établis en fonction des besoins spécifiques de chaque établissement. Toute commande fait l\'objet d\'un contrat détaillé précisant les engagements réciproques, les modalités de livraison et les conditions de paiement.',
                 'legal-modal-title': 'Mentions légales',
@@ -471,9 +522,16 @@
                 'nav-services': 'Services',
                 'nav-quality': 'Quality Commitment',
                 'nav-contact': 'Contact',
-                'hero-title': 'Specialist in Collective Catering for Medical and Educational Institutions',
-                'hero-subtitle': 'Nutritious, hygienic culinary solutions tailored to your specific needs',
-                'hero-btn': 'Contact Us',
+                'hero-title': 'Tailored meals, from care to classroom',
+                'hero-subtitle': 'Collective catering for medical and educational facilities, from menu design to delivery.',
+                'hero-btn': 'Request a quote',
+                'hero-secondary': 'Explore our services',
+                'audience-clinic': 'Clinics',
+                'audience-school': 'Schools',
+                'audience-clinic-title': 'Meals adapted to care requirements',
+                'audience-clinic-text': 'Specific menus, special diets and an organisation designed for patients and healthcare teams.',
+                'audience-school-title': 'Balanced catering, every day',
+                'audience-school-text': 'Varied menus, reliable logistics and a service adapted to your school’s schedule.',
                 'about-title': 'About Us',
                 'about-subtitle': 'Discover our history and values that make us a trusted partner',
                 'value-hygiene-title': 'Hygiene',
@@ -521,19 +579,19 @@
                 'footer-cookies': 'Cookies Policy',
                 'footer-terms': 'Terms and Conditions',
                 'footer-legal-info': 'Legal Notices',
-                'footer-copyright': '© 2025 Nutricare catering. All rights reserved.',
+                'footer-copyright': '© 2026 Nutricare Catering. All rights reserved.',
                 'clinic-modal-title': 'Clinic Catering',
                 'clinic-modal-text': 'Offer your patients and healthcare staff a culinary experience adapted to their specific needs. Our therapeutic menus respect special diets and allergies, while guaranteeing pleasure and nutritional balance. A turnkey solution that relieves your establishment of logistical constraints.',
                 'cantine-modal-title': 'School Canteens',
                 'cantine-modal-text': 'Transform mealtime into a moment of education and discovery! Our balanced menus awaken the taste buds of young guests while meeting nutritional requirements. Fresh products, a pedagogical approach, and simplified management for a canteen that becomes a real educational asset.',
                 'nutrition-modal-title': 'Nutrition Consulting',
-                'nutrition-modal-text': 'Our menus are designed to meet the specific nutritional needs of each audience. For personalized advice and daily tips, find us on our social networks where we regularly share educational content.',
+                'nutrition-modal-text': 'Our menus are designed to meet the specific nutritional needs of each audience. Contact us to review your establishment\'s constraints and expectations.',
                 'livraison-modal-title': 'Delivery and Logistics',
                 'livraison-modal-text': 'Our logistics service ensures punctual deliveries adapted to your time constraints. We perfectly master the cold and hot chain to guarantee the quality and safety of your meals. Each establishment benefits from a personalized delivery schedule and complete traceability.',
                 'privacy-modal-title': 'Privacy Policy',
                 'privacy-modal-text': 'We are committed to protecting your personal data. The information collected via our contact form is only used to respond to your requests and is in no case shared with third parties.',
                 'cookies-modal-title': 'Cookies Policy',
-                'cookies-modal-text': 'Our site operates without its own cookies. However, links to our social networks (Facebook, Twitter, Instagram, LinkedIn) may involve third-party cookies during your navigation on these platforms. We invite you to consult their respective privacy policies for more information.',
+                'cookies-modal-text': 'Our site operates without its own cookies. The contact form is processed by Formspree, whose services may apply their own privacy policy.',
                 'terms-modal-title': 'Terms and Conditions',
                 'terms-modal-text': 'Nutricare catering provides collective catering services based on a personalized quote. Rates are established according to the specific needs of each establishment. Every order is subject to a detailed contract specifying mutual commitments, delivery methods, and payment conditions.',
                 'legal-modal-title': 'Legal Notices',
@@ -581,6 +639,15 @@
 
             // Update page language attribute
             document.documentElement.lang = lang;
+            mobileMenuBtn?.setAttribute('aria-label', lang === 'fr' ? 'Ouvrir le menu' : 'Open menu');
+            document.querySelector('.theme-control .switch')?.setAttribute(
+                'aria-label',
+                lang === 'fr' ? 'Activer le mode sombre' : 'Enable dark mode'
+            );
+            document.querySelector('.hero-audience')?.setAttribute(
+                'aria-label',
+                lang === 'fr' ? 'Choisir votre établissement' : 'Choose your facility'
+            );
         }
 
         // Language switcher buttons
@@ -615,6 +682,7 @@
                     e.preventDefault();
                     // Close mobile menu if open
                     document.querySelector('.main-nav').classList.remove('active');
+                    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
 
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -623,14 +691,57 @@
                 }
             });
         });
+
+        let modalTrigger = null;
+        const openModal = () => document.querySelector('.modal:target');
+        const closeModal = () => {
+            const activeModal = openModal();
+            if (!activeModal) return;
+            history.replaceState(null, '', `${location.pathname}${location.search}`);
+            modalTrigger?.focus();
+        };
+
+        document.querySelectorAll('a[href$="-modal"]').forEach(trigger => {
+            trigger.addEventListener('click', () => { modalTrigger = trigger; });
+        });
+
+        document.querySelectorAll('.modal .close, .modal-overlay').forEach(control => {
+            control.addEventListener('click', event => {
+                event.preventDefault();
+                closeModal();
+            });
+        });
+
+        window.addEventListener('hashchange', () => {
+            openModal()?.querySelector('.modal-content')?.focus();
+        });
+
+        document.addEventListener('keydown', event => {
+            const activeModal = openModal();
+            if (!activeModal) return;
+            if (event.key === 'Escape') closeModal();
+            if (event.key === 'Tab') {
+                const focusable = [...activeModal.querySelectorAll('a[href], button:not([disabled])')];
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable.at(-1);
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            }
+        });
     </script>
 
     <!-- Modal for Restauration pour cliniques -->
-    <div class="modal" id="clinic-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="clinic-modal-title">Restauration pour cliniques</h2>
+    <div class="modal" id="clinic-modal" role="dialog" aria-modal="true" aria-labelledby="clinic-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="clinic-modal-title" data-i18n="clinic-modal-title">Restauration pour cliniques</h2>
             <p data-i18n="clinic-modal-text">Offrez à vos patients et personnel soignant une expérience culinaire
                 adaptée à leurs besoins spécifiques.
                 Nos menus thérapeutiques respectent les régimes particuliers et allergies, tout en garantissant plaisir
@@ -640,11 +751,11 @@
     </div>
 
     <!-- Modal for Cantines scolaires -->
-    <div class="modal" id="cantine-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="cantine-modal-title">Cantines scolaires</h2>
+    <div class="modal" id="cantine-modal" role="dialog" aria-modal="true" aria-labelledby="cantine-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="cantine-modal-title" data-i18n="cantine-modal-title">Cantines scolaires</h2>
             <p data-i18n="cantine-modal-text">Transformez le temps du repas en moment d'éducation et de découverte ! Nos
                 menus équilibrés éveillent les
                 papilles des jeunes convives tout en répondant aux exigences nutritionnelles. Des produits frais, une
@@ -654,23 +765,23 @@
     </div>
 
     <!-- Modal for Conseil en nutrition -->
-    <div class="modal" id="nutrition-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="nutrition-modal-title">Conseil en nutrition</h2>
+    <div class="modal" id="nutrition-modal" role="dialog" aria-modal="true" aria-labelledby="nutrition-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="nutrition-modal-title" data-i18n="nutrition-modal-title">Conseil en nutrition</h2>
             <p data-i18n="nutrition-modal-text">Nos menus sont conçus pour répondre aux besoins nutritionnels
-                spécifiques de chaque public. Pour des conseils personnalisés et des astuces quotidiennes,
-                retrouvez-nous sur nos réseaux sociaux où nous partageons régulièrement du contenu éducatif.</p>
+                spécifiques de chaque public. Contactez-nous pour étudier les contraintes et attentes de votre
+                établissement.</p>
         </div>
     </div>
 
     <!-- Modal for livraison logistique -->
-    <div class="modal" id="livraison-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="livraison-modal-title">Livraison et logistique</h2>
+    <div class="modal" id="livraison-modal" role="dialog" aria-modal="true" aria-labelledby="livraison-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="livraison-modal-title" data-i18n="livraison-modal-title">Livraison et logistique</h2>
             <p data-i18n="livraison-modal-text">Notre service logistique assure des livraisons ponctuelles adaptées à
                 vos contraintes horaires. Nous
                 maîtrisons parfaitement la chaîne du froid et du chaud pour garantir la qualité et la sécurité de vos
@@ -679,11 +790,11 @@
         </div>
     </div>
     <!-- Modal for Politique confidentialité -->
-    <div class="modal" id="confidentialite-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="privacy-modal-title">Politique de confidentialité</h2>
+    <div class="modal" id="confidentialite-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="privacy-modal-title" data-i18n="privacy-modal-title">Politique de confidentialité</h2>
             <p data-i18n="privacy-modal-text">Nous nous engageons à protéger vos données personnelles. Les informations
                 collectées via notre formulaire
                 de contact sont uniquement utilisées pour répondre à vos demandes et ne sont en aucun cas partagées avec
@@ -691,24 +802,21 @@
         </div>
     </div>
     <!-- Modal for Politique des cookies -->
-    <div class="modal" id="cookies-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="cookies-modal-title">Politique des cookies</h2>
-            <p data-i18n="cookies-modal-text">Notre site fonctionne sans cookies propres. Cependant, les liens vers nos
-                réseaux sociaux (Facebook,
-                Twitter, Instagram, LinkedIn) peuvent impliquer des cookies tiers lors de votre navigation sur ces
-                plateformes. Nous vous invitons à consulter leurs politiques de confidentialité respectives pour plus
-                d'informations.</p>
+    <div class="modal" id="cookies-modal" role="dialog" aria-modal="true" aria-labelledby="cookies-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="cookies-modal-title" data-i18n="cookies-modal-title">Politique des cookies</h2>
+            <p data-i18n="cookies-modal-text">Notre site fonctionne sans cookies propres. Le formulaire de contact est
+                traité par Formspree, dont les services peuvent appliquer leur propre politique de confidentialité.</p>
         </div>
     </div>
     <!-- Modal for Conditions générales -->
-    <div class="modal" id="condition-general-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="terms-modal-title">Conditions générales</h2>
+    <div class="modal" id="condition-general-modal" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="terms-modal-title" data-i18n="terms-modal-title">Conditions générales</h2>
             <p data-i18n="terms-modal-text"><strong style="color: var(--primary-color);">Nutricare catering</strong>
                 fournit des services de
                 restauration
@@ -720,14 +828,14 @@
         </div>
     </div>
     <!-- Modal for Mentions légales -->
-    <div class="modal" id="mention-legal-modal">
-        <a href="#main-footer" class="modal-overlay"></a> <!-- Click anywhere to close -->
-        <div class="modal-content">
-            <a href="#main-footer" class="close">&times;</a>
-            <h2 data-i18n="legal-modal-title">Mentions légales</h2>
+    <div class="modal" id="mention-legal-modal" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+        <a href="#main-footer" class="modal-overlay" aria-label="Fermer la fenêtre"></a>
+        <div class="modal-content" tabindex="-1">
+            <a href="#main-footer" class="close" aria-label="Fermer la fenêtre">&times;</a>
+            <h2 id="legal-modal-title" data-i18n="legal-modal-title">Mentions légales</h2>
             <p data-i18n="legal-modal-text"><strong>Nutricare catering SARL</strong><br>
                 Capital social : 10 000 DH<br>
-                Siège social : 34, Lot Hadika Lotissement Salam, Al Quods, SaléMaroc.<br>
+                Siège social : 34, Lot Hadika Lotissement Salam, Al Quods, Salé, Maroc.<br>
                 Tél : +212 5 37 33 44 55<br>
                 Email : contact@nutricare.ma<br>
                 <br>
